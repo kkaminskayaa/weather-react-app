@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CurrentTemperature() {
   return (
-    <div>
+    <div className="CurrentTemperature">
       <h3 className="current-city">Searching...</h3>
       <br />
       <h6 className="current-day"> </h6>

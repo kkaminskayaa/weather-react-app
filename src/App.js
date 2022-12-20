@@ -1,7 +1,6 @@
 
 import './App.css';
 import SearchEngine from "./SearchEngine";
-
 import Footer from "./Footer";
 import Forecast from "./Forecast";
 import CurrentTemperature from "./CurrentTemperature";

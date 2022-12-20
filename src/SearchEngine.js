@@ -2,6 +2,7 @@ import React from "react";
 
 export default function SearchEngine() {
   return (
+    <div className="SearchEngine">
     <div className="row">
       <div className="col-6 enter-city">
         <div className="input-group flex-nowrap">
@@ -26,6 +27,7 @@ export default function SearchEngine() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

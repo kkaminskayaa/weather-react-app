@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="Footer">
       This project was coded by{" "}
       <a
         href="https://www.linkedin.com/in/olia-kaminskaya-720130230/"
@@ -30,6 +30,7 @@ export default function Footer() {
         {" "}
         hosted on Netlify{" "}
       </a>
+      
     </footer>
   );
 }
