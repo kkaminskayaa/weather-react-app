@@ -23,7 +23,7 @@ export default function Footer() {
       </a>{" "}
       and
       <a
-        href="https://spontaneous-starship-59bc01.netlify.app"
+        href="https://super-sfogliatella-298711.netlify.app/"
         target="_blank"
         rel="noreferrer"
       >
