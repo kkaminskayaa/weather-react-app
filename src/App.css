@@ -36,3 +36,147 @@
     transform: rotate(360deg);
   }
 }
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-color: rgba(157, 181, 198, 0.25);
+}
+
+.mb-3 {
+  border-radius: 33px;
+}
+
+h6 {
+  font-style: italic;
+  text-align: left;
+}
+
+.enter-city {
+  margin: 0 auto;
+}
+
+.sunny {
+  font-size: 100px;
+}
+
+.current-city {
+  text-align: center;
+
+  width: 55%;
+  padding: 7px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  margin-left: 115px;
+}
+
+.current-degree,
+.current-parameter {
+  text-align: center;
+  margin: 13px auto;
+  width: 130px;
+  padding: 3px;
+  border: 2px solid grey;
+  border-radius: 80px;
+}
+.current-degree {
+  width: 85px;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body-two {
+  max-width: 50%;
+  margin: 30px 65px;
+}
+
+.list-group-flush {
+  padding: 1px;
+  margin: 25px;
+
+  font-size: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.correct {
+  font-weight: 300;
+  color: dimgrey;
+  margin: 70px 0px;
+  padding-left: 0px;
+}
+
+.current-emoji,
+.current-parameter,
+.current-degree,
+.current-day,
+.current-time,
+.humidity-percent,
+.wind-speed,
+.current-city {
+  color: dimgrey;
+}
+
+.emojis {
+  font-size: 28px;
+  color: dimgrey;
+}
+
+.celsius,
+.fahrenheit,
+#search-btn {
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-size: smaller;
+}
+.numeric {
+  color: rgb(232, 141, 167);
+}
+
+footer a {
+  color: dimgrey;
+  font-style: italic;
+}
+
+.btn-primary {
+  background-color: rgb(157, 181, 198);
+  color: white;
+  border: 1px solid;
+  border-color: dimgrey;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  font-weight: bold;
+  background-color: dimgrey;
+  color: white;
+  border-color: dimgrey;
+}
+
+.future-emojis {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.current-emoji {
+  font-size: 140px;
+  padding: 5px;
+}
+
+.active {
+  color: rgb(157, 181, 198);
+}
