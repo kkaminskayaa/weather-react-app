@@ -14,7 +14,7 @@ export default function Footer() {
       </a>{" "}
       and is{" "}
       <a
-        href="https://github.com/kkaminskayaa/weather_app"
+        href="https://github.com/kkaminskayaa/weather-react-app"
         target="_blank"
         rel="noreferrer"
       >
