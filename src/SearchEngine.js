@@ -13,7 +13,9 @@ export default function SearchEngine() {
                 type="text"
                 className="form-control"
                 placeholder="Enter city"
-                autocomplete="off"
+                
+                autoFocus="on"
+
               />
               <button type="submit" className="input-group-text">
                 <span role="img" aria-label="lupe">
