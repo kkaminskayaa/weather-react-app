@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 export default function CurrentTemperature() {
 
@@ -16,8 +17,8 @@ function showTemperature(response){
         humidity: response.data.main.humidity,
         city: response.data.name,
         date:  new Date(response.data.dt * 1000),
-        time: "12:14 a.m.",
-       //description: response.data.weather[0].description,
+        time: new Date(response.data.dt * 1000),
+        //description: response.data.weather[0].description,
         //icon: response.data.weather[0].icon
     });
 
@@ -36,7 +37,7 @@ if (weatherData.ready) {
       <h6 className="current-day">
         <FormattedDate date={weatherData.date} />
       </h6>
-      <h6 className="current-time">Current time:{weatherData.time}</h6>
+      <h6 className="current-time"><FormattedTime time={weatherData.time} /></h6>
 
       <h2 id="current-emoji" className="current-emoji">
         🌦
