@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import WeatherIcon from "./WeatherIcon"
+import CurrentTemperature from "./CurrentTemperature";
 
 export default function WeatherInfo(props){
     return (
@@ -21,23 +22,7 @@ export default function WeatherInfo(props){
             <WeatherIcon code={props.data.icon} />
             
           </h2>
-          <h3 className="current-degree">
-            {" "}
-            <span className="current-temperature">
-              {Math.round(props.data.temperature)}°
-            </span>{" "}
-          </h3>
-          <h3 className="current-parameter">
-            <span id="celsiusLink" className="celsius active">
-              {" "}
-              °C{" "}
-            </span>{" "}
-            |{" "}
-            <span id="fahrenheitLink" className="fahrenheit">
-              {" "}
-              °F{" "}
-            </span>
-          </h3>
+          <CurrentTemperature celsius={props.data.temperature}/>
           <h6>
             {" "}
             <span className="humidity-percent">
