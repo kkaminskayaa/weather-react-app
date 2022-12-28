@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import WeatherIcon from "./WeatherIcon"
 
 export default function WeatherInfo(props){
     return (
@@ -17,7 +18,8 @@ export default function WeatherInfo(props){
           </h6>
 
           <h2 id="current-emoji" className="current-emoji">
-            🌦
+            <WeatherIcon code={props.data.icon} />
+            
           </h2>
           <h3 className="current-degree">
             {" "}

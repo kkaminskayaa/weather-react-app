@@ -20,7 +20,7 @@ function showTemperature(response){
         date:  new Date(response.data.dt * 1000),
         time: new Date(response.data.dt * 1000),
         //description: response.data.weather[0].description,
-        //icon: response.data.weather[0].icon
+        icon: response.data.weather[0].icon
     });
 
 }
@@ -47,10 +47,10 @@ if (weatherData.ready) {
     <div>
       <div className="SearchEngine">
         <div className="row">
-          <div className="col-6 enter-city">
+          <div className="col-9 enter-city">
             <div className="input-group flex-nowrap">
               <form id="search-form" onSubmit={handleSubmit} >
-                <div className="input-group">
+                <div className=" col-3 input-group">
                   <input
                     id="search-text-input"
                     type="text"
