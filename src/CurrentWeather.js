@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
-
+import Forecast from "./Forecast";
 
 export default function CurrentWeather(props) {
 const [city, setCity] = useState(props.defaultCity);
@@ -10,7 +10,7 @@ const [weatherData, setWeatherData] = useState({ ready: false });
 
 
 function showTemperature(response){
-     console.log(response.data);
+     
     setWeatherData({
         ready: true,
         temperature: response.data.main.temp,
@@ -20,7 +20,8 @@ function showTemperature(response){
         date:  new Date(response.data.dt * 1000),
         time: new Date(response.data.dt * 1000),
         //description: response.data.weather[0].description,
-        icon: response.data.weather[0].icon
+        icon: response.data.weather[0].icon, 
+        coordinates: response.data.coord
     });
 
 }
@@ -49,7 +50,7 @@ if (weatherData.ready) {
         <div className="row">
           <div className="col-9 enter-city">
             <div className="input-group flex-nowrap">
-              <form id="search-form" onSubmit={handleSubmit} >
+              <form id="search-form" onSubmit={handleSubmit}>
                 <div className=" col-3 input-group">
                   <input
                     id="search-text-input"
@@ -74,7 +75,9 @@ if (weatherData.ready) {
           </div>
         </div>
       </div>
-      <WeatherInfo data={weatherData} />
+      <br />
+        <WeatherInfo data={weatherData} />
+        <Forecast coordinates={weatherData.coordinates} />
     </div>
   );
 } else {

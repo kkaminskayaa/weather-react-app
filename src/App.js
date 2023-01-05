@@ -2,8 +2,8 @@
 import './App.css';
 
 import Footer from "./Footer";
-import Forecast from "./Forecast";
 import CurrentWeather from "./CurrentWeather";
+
 
 
 function App() {
@@ -22,9 +22,7 @@ function App() {
                 <div className="col-6">
                   <CurrentWeather defaultCity = "Toronto"/>
                 </div>
-                <div className="col-6">
-                  <Forecast />
-                </div>
+               
               </div>
             </div>
           </div>

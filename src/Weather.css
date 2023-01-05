@@ -59,12 +59,7 @@ h6 {
   margin: 30px 65px;
 }
 
-.list-group-flush {
-  padding: 1px;
-  margin: 25px;
 
-  font-size: 20px;
-}
 
 .container {
   max-width: 900px;
@@ -104,9 +99,7 @@ footer {
   text-align: center;
   font-size: smaller;
 }
-.numeric  {
-  color: rgb(232, 141, 167);
-}
+
 
 footer a {
   color: dimgrey;
@@ -128,11 +121,7 @@ footer a {
   border-color: dimgrey;
 }
 
-.future-emojis {
-  font-size: 30px;
-  padding: 0px;
-  margin: 0px;
-}
+
 
 .current-emoji {
   font-size: 140px;

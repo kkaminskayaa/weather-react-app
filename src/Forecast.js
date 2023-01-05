@@ -1,64 +1,39 @@
-import React from "react";
+import React, { useState } from "react"; 
 
-export default function Forecast() {
+import "./Forecast.css";
+import axios from "axios"; 
+import WeatherForecastDay from "./WeatherForecastDay";
+
+export default function Forecast(props){
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(" ");
+
+function handleTemperature(response){
+  setForecast(response.data.daily);
+  setLoaded(true);
+  
+}
+ 
+ if(loaded){
+  console.log(forecast);
   return (
-    <div className="Forecast"> 
-    <div className="row">
-      <div className="col-4 correct">
-        <ul id="forecast_days" className="list-group list-group-flush">
-          <li className="list-group-item numeric">Tue</li>
-          <li className="list-group-item numeric">Wed</li>
-          <li className="list-group-item numeric">Thu</li>
-          <li className="list-group-item numeric">Fri</li>
-          <li className="list-group-item numeric">Sat</li>
-          <li className="list-group-item numeric">Sun</li>
-        </ul>
+    <div className="Forecast">
+      <div className="row">
+        <div className="col-4 correct">
+         <WeatherForecastDay data={forecast[0]} />
+        </div>
       </div>
-      <div className="col-4 correct">
-        <ul id="forecast_icons" className="list-group list-group-flush">
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              ⛅️
-            </span>
-          </li>
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              🌥
-            </span>
-          </li>
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              🌧
-            </span>
-          </li>
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              ⛅️
-            </span>
-          </li>
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              🌧
-            </span>
-          </li>
-          <li className="list-group-item future-emojis">
-            <span role="img" aria-label="weather">
-              🌧
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div className="col-4 correct">
-        <ul id="forecast_temp" className="list-group list-group-flush">
-          <li className="list-group-item numeric numbers">2°</li>
-          <li className="list-group-item numeric">5°</li>
-          <li className="list-group-item numeric">7°</li>
-          <li className="list-group-item numeric">3°</li>
-          <li className="list-group-item numeric">5°</li>
-          <li className="list-group-item numeric">4°</li>
-        </ul>
-      </div>
-    </div>
     </div>
   );
+ } else {
+  const apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&&units=metric`;
+
+  axios.get(apiUrl).then(handleTemperature);
+  return null;
+
+ }
+  
 }

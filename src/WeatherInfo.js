@@ -19,7 +19,7 @@ export default function WeatherInfo(props){
           </h6>
 
           <h2 id="current-emoji" className="current-emoji">
-            <WeatherIcon code={props.data.icon} />
+            <WeatherIcon code={props.data.icon} size={130} />
             
           </h2>
           <CurrentTemperature celsius={props.data.temperature}/>

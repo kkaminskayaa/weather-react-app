@@ -1,0 +1,16 @@
+.numeric  {
+  color: rgb(232, 141, 167);
+}
+
+.future-emojis {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.list-group-flush {
+  padding: 1px;
+  margin: 25px;
+
+  font-size: 20px;
+}
