@@ -16,7 +16,9 @@ h6 {
 }
 
 .enter-city {
-  margin: 0 auto;
+  margin: 0 125px;
+  margin-top: -45px;
+  
 }
 
 .sunny {
@@ -25,12 +27,12 @@ h6 {
 
 .current-city {
   text-align: center;
-
-  width: 55%;
-  padding: 7px;
+  margin: 0 auto;
+  width: 50%;
+  padding: 7px 12px;
   border: 2px solid grey;
   border-radius: 15px;
-  margin-left: 115px;
+
 }
 
 .current-degree,
@@ -62,7 +64,7 @@ h6 {
 
 
 .container {
-  max-width: 900px;
+  max-width: 650px;
   margin-top: 50px;
 }
 
@@ -124,7 +126,7 @@ footer a {
 
 
 .current-emoji {
-  font-size: 140px;
+  font-size: 50px;
   padding: 5px;
 }
 

@@ -47,11 +47,11 @@ if (weatherData.ready) {
   return (
     <div>
       <div className="SearchEngine">
-        <div className="row">
-          <div className="col-9 enter-city">
+        
+          <div className="enter-city">
             <div className="input-group flex-nowrap">
               <form id="search-form" onSubmit={handleSubmit}>
-                <div className=" col-3 input-group">
+                <div className="input-group">
                   <input
                     id="search-text-input"
                     type="text"
@@ -73,7 +73,7 @@ if (weatherData.ready) {
               </form>
             </div>
           </div>
-        </div>
+        
       </div>
       <br />
         <WeatherInfo data={weatherData} />

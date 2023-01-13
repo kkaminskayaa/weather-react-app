@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="card border-dark mb-3">
+        <div className="card border-dark">
           <div className="card-body text-dark">
             <br />
             
@@ -18,8 +18,8 @@ function App() {
            
 
             <div className="container text-center">
-              <div className="row">
-                <div className="col-6">
+              
+                <div>
                   <CurrentWeather defaultCity = "Toronto"/>
                 </div>
                
@@ -29,7 +29,7 @@ function App() {
         </div>
         <Footer />
       </div>
-    </div>
+    
   );
 }
 

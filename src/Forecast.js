@@ -15,12 +15,26 @@ function handleTemperature(response){
 }
  
  if(loaded){
-  console.log(forecast);
   return (
-    <div className="Forecast">
-      <div className="row">
-        <div className="col-4 correct">
-         <WeatherForecastDay data={forecast[0]} />
+    <div>
+      <div className="Forecast">
+        <div className="row">
+          <div className="col">
+            <WeatherForecastDay data={forecast[0]} />
+          </div>
+
+          <div className="col">
+            <WeatherForecastDay data={forecast[1]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[2]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[3]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[4]} />
+          </div>
         </div>
       </div>
     </div>
