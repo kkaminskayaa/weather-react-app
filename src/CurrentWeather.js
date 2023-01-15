@@ -66,9 +66,7 @@ if (weatherData.ready) {
                       🔍
                     </span>
                   </button>
-                  <button className="btn btn-primary" id="current-btn">
-                    Current
-                  </button>
+                 
                 </div>
               </form>
             </div>
