@@ -24,12 +24,16 @@ function handleTemperature(response){
       <div className="Forecast">
         <div className="row">
           {forecast.map(function(dailyForecast, index){
-            if (index < 6 )
-            return(
-              <div className="col" key={index}>
-                <WeatherForecastDay data={dailyForecast} />
-              </div>
-            );
+            if (index < 6 ){ 
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+            
           })}
         </div>
       </div>
