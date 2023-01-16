@@ -75,6 +75,7 @@ if (weatherData.ready) {
       </div>
       <br />
         <WeatherInfo data={weatherData} />
+        <br />
         <Forecast coordinates={weatherData.coordinates} />
     </div>
   );
